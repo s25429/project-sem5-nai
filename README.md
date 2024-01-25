@@ -5,8 +5,19 @@
 
 ## Setup
 
-### Virtualenv installation
+## Local git integration with Github
 
+If you cannot push or pull anything from github repository to your local project folder, add those lines while in the root directory of the project.
+```bash
+git config user.name "<name and surname>"
+git config user.emal "<your email address>"
+```
+
+Overwrite `<...>` with your actual data and it should work fine now.
+
+This will store your user data for this project locally. On your first push or pull you might need to log in to your Github account via a browser.
+
+### Virtualenv installation
 
 ```bash
 # For windows
