@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nai</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='style.css')}}">
 </head>
 <body>
-    <h1>hello there</h1>
-    <p>from server we get: {{test}}</p>
+    <img src="{{url_for('.static', filename='bg.jpg')}}" alt="image-by-rufio1-from-pixabay">
+    <div class="container">
+        <h1>Znajdź osoby w tekscie!</h1>
+
+        <form method="post">
+            <section class="form-model">
+                <label for="model">Model=</label>
+                <select name="model" id="model" required>
+                    <option value="bert">Bert-Base-NER</option>
+                    <option value="spacy">SpaCy</option>
+                    <option value="beluga">StableBeluga2</option>
+                </select>
+            </section>
+            <section class="form-message">
+                <label for="message">Tekst</label>
+                <textarea name="message" id="message" required style="resize: none"></textarea>
+            </section>
+            <button type="submit">Procesuj</button>
+        </form>
+
+        <hr>
+
+        <section class="model-output">
+            <h2>Wynik</h2>
+            <textarea name="output" id="output" readonly style="resize: none"></textarea>
+        </section>
+
+        <footer>&copy; Copyright 2024</footer>
+    </div>
 </body>
 </html>
