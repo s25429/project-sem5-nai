@@ -20,11 +20,31 @@ model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER")
 nlp = pipeline("ner", model=model, tokenizer=tokenizer)
 
 
-# In[10]:
+# In[11]:
 
 
-def get_example():
-    result = nlp("My name is Wolfgang and I live in Berlin")
+def process_message(message: str) -> list[str]:
+    """
+    Runs given message through pretrained Bert NER model and returns people
+    """
+    result = nlp(message)
     names = [obj['word'] for obj in result if obj['entity'] == 'B-PER']
     return names
+
+
+# In[ ]:
+
+
+def get_example_message() -> str:
+    return "My name is Wolfgang and I live in Berlin"
+
+
+# In[12]:
+
+
+def process_example() -> list[str]:
+    """
+    Runs an example string through pretrained Bert NER model and returns people.
+    """
+    return process_message(get_example_message())
 

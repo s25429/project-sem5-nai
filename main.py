@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from models.raw.bert import get_example
+from models.raw.bert import process_example
 
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    print(get_example())
+    print(process_example())
     return render_template('index.html', test='PYTHON')
 
 
