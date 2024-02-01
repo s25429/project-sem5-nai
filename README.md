@@ -22,12 +22,12 @@ This will store your user data for this project locally. On your first push or p
 ```bash
 # For windows
 pip install virtualenv
-virtualenv --version  # Check if installed correctly
+virtualenv --version  # Check if installed correctly, if doesn't work - ignore
 
 # For mac & linux (hopefully)
 sudo apt install python3-virtualenv
 sudo pip3 install virtualenv
-virtualenv --version  # Chech if installed correctly
+virtualenv --version  # Chech if installed correctly, if doesn't work - ignore
 ```
 
 ---
@@ -36,7 +36,8 @@ virtualenv --version  # Chech if installed correctly
 
 Creates a vritual environment with name 'venv'. A folder named 'venv' appears where all packages will be installed.
 ```bash
-virtualenv venv
+virtualenv venv  # OR second line
+python -m virtualenv venv
 ```
 
 Activate venv before installing any python packages or running any python scripts. One of those should work. Once it is activated, at the very front or at the top of command line you will see virtual environment name: (venv).
