@@ -1,3 +1,10 @@
+:root {
+    --c-black: rgb(26, 26, 26);
+    --c-white: #d9ddf0;
+    --c-accent: rgb(79, 76, 255);
+    --c-complement: rgb(212, 218, 248);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -7,7 +14,7 @@
 }
 
 *:focus-visible {
-    outline: 1px solid blue;
+    outline: 1px solid var(--c-accent);
 }
 
 body {
@@ -64,8 +71,12 @@ select {
 }
 
 textarea {
+    min-height: 20ch;
+
     border: 1px solid black;
     background-color: transparent;
+
+    resize: none;
 }
 
 button {
@@ -74,8 +85,15 @@ button {
     border: 1px solid black;
     background-color: transparent;
 
+    transition: background-color .1s linear;
+
     cursor: pointer;
 }
+
+button:hover {
+    background-color: var(--c-complement);
+}
+
 
 img {
     position: fixed;
