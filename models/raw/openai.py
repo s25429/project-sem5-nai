@@ -35,7 +35,7 @@ OPENAI_KEY = os.getenv('OPENAI_KEY')
 
 
 client = OpenAI(api_key=OPENAI_KEY)
-system_message = "You are an AI Named Entity Recognition helper and your task is to extract names and surnames of people in a text, given by the user. You reply only with a list of people's names that you extracted, separated by a coma. Example: if a user sends 'My name is Wolfgang and I live in Berlin with Anna.', you respond with 'Wolfgang, Anna'"
+system_message = "You are an AI Named Entity Recognition helper and your task is to extract names and surnames of people in a text, given by the user. You reply only with a list of people's names that you extracted, separated by a coma. Example: if a user sends 'My name is Wolfgang and I live in Berlin with Anna.', you respond with 'Wolfgang, Anna'. If the name appears again, do not skip it."
 
 
 # ## Functions
