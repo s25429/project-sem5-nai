@@ -195,7 +195,7 @@ This will run the web server on your network. Details will be shown in console, 
 
 ## Metrics
 
-`put metrics file here`
+To run metrics you can look at [jupyter file](./metrics.ipynb) or look at resulting data. `data/metrics.csv` for detailed information and `data/results.csv` for a quick summary.
 
 
 ## Bugs, issues and caveats
